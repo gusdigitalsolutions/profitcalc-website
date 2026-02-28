@@ -3,13 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProfitCalc - Know Your Real Profit</title>
-  <meta name="description" content="ProfitCalc helps Shopify sellers calculate true per-product profit margins including fees, shipping, and all hidden costs.">
+  <title>ProfitCalc - Know Your Real Shopify Profit</title>
+  <meta name="description" content="ProfitCalc helps Shopify sellers calculate true per-product profit margins including fees, shipping, and all hidden costs. Free iOS app.">
+  <meta name="keywords" content="Shopify profit calculator, Shopify margins, product profit, Shopify fees calculator, e-commerce profit">
+  <meta name="author" content="Gus Digital Solutions LLC">
   <meta name="theme-color" content="#0a0a1a">
-  <link rel="stylesheet" href="style.css">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://profitcalcapp.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ProfitCalc - Know Your Real Shopify Profit">
+  <meta property="og:description" content="Stop guessing. See exactly what you earn on every product after Shopify fees, payment processing, shipping, and all hidden costs.">
+  <meta property="og:url" content="https://profitcalcapp.com/">
+  <meta property="og:site_name" content="ProfitCalc">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ProfitCalc - Know Your Real Shopify Profit">
+  <meta name="twitter:description" content="Stop guessing. See exactly what you earn on every product after Shopify fees, payment processing, shipping, and all hidden costs.">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-180x180.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data: SoftwareApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,19 +59,43 @@
     },
     "author": {
       "@type": "Organization",
-      "name": "Gus Digital Solutions LLC"
+      "name": "Gus Digital Solutions LLC",
+      "url": "https://gusdigitalsolutions.com"
     },
-    "description": "Calculate true per-product profit margins including Shopify fees, payment processing, and shipping costs."
+    "description": "Calculate true per-product profit margins including Shopify fees, payment processing, and shipping costs.",
+    "url": "https://profitcalcapp.com"
+  }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gus Digital Solutions LLC",
+    "url": "https://gusdigitalsolutions.com",
+    "logo": "https://profitcalcapp.com/assets/icon-512x512.png",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ProfitCalc",
+    "url": "https://profitcalcapp.com"
   }
   </script>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="/" class="nav-logo">
-        <span class="logo-icon">$</span>
+      <a href="/" class="nav-logo" aria-label="ProfitCalc home">
+        <span class="logo-icon" aria-hidden="true">$</span>
         <span class="logo-text">ProfitCalc</span>
       </a>
       <ul class="nav-links">
@@ -48,15 +107,15 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="container hero-inner">
       <div class="hero-content">
         <p class="hero-badge">For Shopify Sellers</p>
-        <h1 class="hero-title">Know Your<br><span class="text-accent">Real Profit</span></h1>
+        <h1 class="hero-title" id="hero-title">Know Your<br><span class="text-accent">Real Profit</span></h1>
         <p class="hero-subtitle">Stop guessing. ProfitCalc shows you exactly what you earn on every product after Shopify fees, payment processing, shipping, and all hidden costs.</p>
         <div class="hero-cta">
-          <a href="#" class="btn btn-primary" aria-label="Download on the App Store">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.56C5.55 8.08 7.13 7.17 8.82 7.15C10.1 7.13 11.32 8.01 12.11 8.01C12.89 8.01 14.37 6.95 15.92 7.11C16.57 7.14 18.39 7.38 19.56 9.07C19.47 9.13 17.29 10.39 17.31 13.04C17.34 16.19 20.07 17.25 20.1 17.26C20.07 17.33 19.67 18.69 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+          <a href="#" class="btn btn-primary" aria-label="Download ProfitCalc on the App Store">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.56C5.55 8.08 7.13 7.17 8.82 7.15C10.1 7.13 11.32 8.01 12.11 8.01C12.89 8.01 14.37 6.95 15.92 7.11C16.57 7.14 18.39 7.38 19.56 9.07C19.47 9.13 17.29 10.39 17.31 13.04C17.34 16.19 20.07 17.25 20.1 17.26C20.07 17.33 19.67 18.69 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             <div class="btn-text">
               <span class="btn-small">Download on the</span>
               <span class="btn-large">App Store</span>
@@ -126,35 +185,35 @@
   </section>
 
   <!-- Features -->
-  <section class="features" id="features">
+  <section class="features" id="features" aria-labelledby="features-title">
     <div class="container">
       <p class="section-badge">Features</p>
-      <h2 class="section-title">Everything you need to<br><span class="text-accent">protect your margins</span></h2>
+      <h2 class="section-title" id="features-title">Everything you need to<br><span class="text-accent">protect your margins</span></h2>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <h3 class="feature-title">Per-Product Margins</h3>
           <p class="feature-desc">Calculate true profit per item including all costs. No more spreadsheet guesswork.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon feature-icon--purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
           </div>
           <h3 class="feature-title">Fee Calculator</h3>
           <p class="feature-desc">Shopify fees, payment processing, shipping costs -- all built in and automatically applied.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon feature-icon--blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
           <h3 class="feature-title">Bulk Analysis</h3>
           <p class="feature-desc">Import products and see margins across your entire store in seconds.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon feature-icon--amber">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           </div>
           <h3 class="feature-title">Export Reports</h3>
           <p class="feature-desc">PDF and CSV exports ready for your accountant or business partner.</p>
@@ -164,29 +223,29 @@
   </section>
 
   <!-- How It Works -->
-  <section class="how-it-works">
+  <section class="how-it-works" aria-labelledby="how-title">
     <div class="container">
       <p class="section-badge">How It Works</p>
-      <h2 class="section-title">Three steps to<br><span class="text-accent">real numbers</span></h2>
+      <h2 class="section-title" id="how-title">Three steps to<br><span class="text-accent">real numbers</span></h2>
       <div class="steps-grid">
         <div class="step">
-          <div class="step-number">1</div>
+          <div class="step-number" aria-hidden="true">1</div>
           <h3 class="step-title">Add Products</h3>
           <p class="step-desc">Enter your product details or import from your Shopify store.</p>
         </div>
-        <div class="step-arrow">
+        <div class="step-arrow" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
         <div class="step">
-          <div class="step-number">2</div>
+          <div class="step-number" aria-hidden="true">2</div>
           <h3 class="step-title">Enter Costs</h3>
           <p class="step-desc">Add product costs, fees are calculated automatically for you.</p>
         </div>
-        <div class="step-arrow">
+        <div class="step-arrow" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
         <div class="step">
-          <div class="step-number">3</div>
+          <div class="step-number" aria-hidden="true">3</div>
           <h3 class="step-title">See Real Profit</h3>
           <p class="step-desc">Instantly see your true margins with every cost accounted for.</p>
         </div>
@@ -195,25 +254,26 @@
   </section>
 
   <!-- Give Back -->
-  <section class="give-back">
+  <section class="give-back" aria-labelledby="giveback-title">
     <div class="container">
       <div class="give-back-inner">
-        <div class="give-back-icon">
+        <div class="give-back-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         </div>
-        <h2 class="give-back-title">Giving Back</h2>
-        <p class="give-back-desc">A portion of every ProfitCalc download supports the <strong>National Breast Cancer Foundation</strong>, providing help and inspiring hope to those affected by breast cancer through early detection, education, and support services.</p>
-        <a href="https://www.nationalbreastcancer.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Learn More About NBCF</a>
+        <h2 class="give-back-title" id="giveback-title">Giving Back</h2>
+        <p class="give-back-desc">ProfitCalc is free because we believe every seller deserves to know their real numbers. If it helps your business, consider giving back. We support the <strong>National Breast Cancer Foundation</strong> -- providing help and inspiring hope through early detection, education, and support services.</p>
+        <a href="https://www.nationalbreastcancer.org/get-involved/give/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Support NBCF &rarr;</a>
+        <p class="give-back-note">We don't take a cut. Every dollar goes directly to the foundation.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="/" class="nav-logo">
-          <span class="logo-icon">$</span>
+        <a href="/" class="nav-logo" aria-label="ProfitCalc home">
+          <span class="logo-icon" aria-hidden="true">$</span>
           <span class="logo-text">ProfitCalc</span>
         </a>
         <p class="footer-copy">&copy; 2026 Gus Digital Solutions LLC. All rights reserved.</p>
@@ -221,6 +281,7 @@
       <div class="footer-links">
         <a href="/privacy/">Privacy Policy</a>
         <a href="mailto:support@profitcalcapp.com">Support</a>
+        <a href="https://www.nationalbreastcancer.org/get-involved/give/" target="_blank" rel="noopener">&hearts; Give Back</a>
       </div>
     </div>
   </footer>
