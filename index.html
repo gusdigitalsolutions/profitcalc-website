@@ -101,7 +101,7 @@
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="/privacy/">Privacy</a></li>
-        <li><a href="mailto:support@profitcalcapp.com">Support</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -114,10 +114,10 @@
         <h1 class="hero-title" id="hero-title">Know Your<br><span class="text-accent">Real Profit</span></h1>
         <p class="hero-subtitle">Stop guessing. ProfitCalc shows you exactly what you earn on every product after Shopify fees, payment processing, shipping, and all hidden costs.</p>
         <div class="hero-cta">
-          <a href="#" class="btn btn-primary" aria-label="Download ProfitCalc on the App Store">
+          <a href="#contact" class="btn btn-primary" aria-label="Get notified when ProfitCalc launches on the App Store">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.56C5.55 8.08 7.13 7.17 8.82 7.15C10.1 7.13 11.32 8.01 12.11 8.01C12.89 8.01 14.37 6.95 15.92 7.11C16.57 7.14 18.39 7.38 19.56 9.07C19.47 9.13 17.29 10.39 17.31 13.04C17.34 16.19 20.07 17.25 20.1 17.26C20.07 17.33 19.67 18.69 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             <div class="btn-text">
-              <span class="btn-small">Download on the</span>
+              <span class="btn-small">Coming Soon to the</span>
               <span class="btn-large">App Store</span>
             </div>
           </a>
@@ -268,6 +268,43 @@
     </div>
   </section>
 
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <span class="section-badge">Get In Touch</span>
+      <h2 class="section-title">Get Free Profit Tips</h2>
+      <p class="contact-subtitle">Drop your email and get 5 profit margin mistakes most small businesses make &mdash; plus reach out if you need custom calculator features.</p>
+      <form class="contact-form" id="contact-form">
+        <input type="hidden" name="access_key" value="33d53555-6c83-4eeb-8175-bcedcd48b63e">
+        <input type="hidden" name="from_name" value="ProfitCalc">
+        <input type="hidden" name="subject" value="ProfitCalc Contact + Profit Tips">
+        <input type="hidden" name="source" value="profitcalc-contact">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="you@example.com" required maxlength="254">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message <span class="form-optional">(optional)</span></label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="Need custom features? Tell us what you're looking for..." maxlength="2000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Send &amp; Get Free Tips</button>
+        <div class="form-error" id="form-error"></div>
+      </form>
+      <div class="form-success" id="form-success">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <span>Check your inbox for profit tips!</span>
+      </div>
+      <p class="contact-alt">Or email us directly at <a href="mailto:gus@gusdigitalsolutions.com">gus@gusdigitalsolutions.com</a></p>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
@@ -280,11 +317,50 @@
       </div>
       <div class="footer-links">
         <a href="/privacy/">Privacy Policy</a>
-        <a href="mailto:support@profitcalcapp.com">Support</a>
+        <a href="mailto:gus@gusdigitalsolutions.com">Support</a>
         <a href="https://www.nationalbreastcancer.org/get-involved/give/" target="_blank" rel="noopener">&hearts; Give Back</a>
       </div>
     </div>
   </footer>
+
+  <script>
+    function escHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      if (localStorage.getItem('profitcalc_contact_submitted')) {
+        document.getElementById('form-success').style.display = 'flex';
+        this.style.display = 'none';
+        return;
+      }
+      const btn = this.querySelector('.form-submit');
+      const errorEl = document.getElementById('form-error');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      errorEl.style.display = 'none';
+      try {
+        const data = Object.fromEntries(new FormData(this));
+        data.name = escHtml(data.name);
+        data.email = escHtml(data.email);
+        if (data.message) data.message = escHtml(data.message);
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+        if (json.success) {
+          localStorage.setItem('profitcalc_contact_submitted', '1');
+          this.style.display = 'none';
+          document.getElementById('form-success').style.display = 'flex';
+        } else { throw new Error(json.message || 'Submission failed'); }
+      } catch (err) {
+        errorEl.textContent = 'Something went wrong. Please try again or email gus@gusdigitalsolutions.com';
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Send & Get Free Tips';
+      }
+    });
+  </script>
 
 </body>
 </html>
